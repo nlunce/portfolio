@@ -17,22 +17,26 @@ body {
     display: grid;
 }
 
-main {
-    
-}
+main {}
 
 #portrait {
     width: 600px;
 }
 
-.nav-bar {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.nav-container {
+    display: grid;
+    grid-template-rows: 1fr 1.75fr 1fr;
+    background-color: #1c1c1c;
+
 }
 
-.nav-bar-container {
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #1c1c1c;
+    height: 100%;
+    justify-content: space-around;
 
 }
 
@@ -41,37 +45,30 @@ nav a {
     font-family: "Roboto", sans-serif, Helvetica;
     text-decoration: none;
     color: #fffdf7;
-
+    padding: .5em 0em .5em 0em;
+    margin: 1em 0em 1em 0em;
+    border-bottom-style: solid;
 }
 
-nav a:hover{
+nav a:hover {
     color: #c90933;
 }
 
-.home{
-
+.fa-solid.fa-house,
+.fa-solid.fa-user,
+.fa-solid.fa-bars,
+.fa-solid.fa-briefcase,
+.fa-solid.fa-comments {
+    color: #fffdf7;
 }
 
-.about{
-    flex: 1;
+.home:hover>i,
+.about:hover>i,
+.services:hover>i,
+.portfolio:hover>i,
+.contact:hover>i {
+    color: #c90933;
 }
-
-.services{
-    flex: 1;
-}
-
-.portfolio{
-    flex: 1;
-}
-
-.contact{
-    flex: 1;
-}
-
-
-
-
-
 
 
 
