@@ -13,14 +13,12 @@ body {
     margin: 0 auto;
 }
 
-#hero {
-    display: grid;
-}
 
-main {}
 
-#portrait {
-    width: 600px;
+main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) 2fr;
+  grid-template-rows: 1fr 4fr 1fr;
 }
 
 .nav-container {
@@ -86,6 +84,14 @@ nav a:hover {
 
 }
 
+#portrait {
+    width: 50%;
+    grid-column: 3/4;
+    grid-row: 2/3;
+    justify-self: center;
+    align-self: center;
+
+}
 
 .intro {
     color: #fffdf7;
@@ -95,4 +101,23 @@ nav a:hover {
 .intro-title {
     color: #fffdf7;
     font-family: "Oswald", "Roboto", sans-serif;
+}
+
+h1 span{
+    color: #c90933;
+}
+
+h2 span{
+    color: #c90933;
+}
+
+.intro-title{
+    grid-column: 1/3;
+    grid-row: 2/3;
+}
+
+.intro{
+    /* display: block;
+    grid-column: 1/3;
+    grid-row: 2/3; */
 }
