@@ -27,6 +27,10 @@ main {}
     display: grid;
     grid-template-rows: 1fr 1.75fr 1fr;
     background-color: #1c1c1c;
+    border-right-style: solid;
+    border-color: #4e4e4e;
+    border-width: 1.5px;
+
 
 }
 
@@ -45,9 +49,12 @@ nav a {
     font-family: "Roboto", sans-serif, Helvetica;
     text-decoration: none;
     color: #fffdf7;
-    padding: .5em 0em .5em 0em;
+    padding: .5em 2em .5em 2em;
     margin: 1em 0em 1em 0em;
     border-bottom-style: solid;
+    border-color: #4e4e4e;
+    align-items: center;
+    justify-content: center;
 }
 
 nav a:hover {
@@ -71,6 +78,13 @@ nav a:hover {
 }
 
 
+.nav-button-container{
+    display: grid;
+    width: 100%;
+    justify-content: center;
+    grid-template-columns: 1fr 2fr 1fr;
+
+}
 
 
 .intro {
