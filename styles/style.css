@@ -1,67 +1,65 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&family=Ubuntu&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&family=Ubuntu&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&family=Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&family=Ubuntu&display=swap");
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-:root{
-    --primary-color: #0d0d0d;
-    --secondary-color: #1c1c1c;
-    --accent-color: #c90933;
-    --secondary-accent-color: #4e4e4e;
-    --text-color: #fffdf7;
+:root {
+  --primary-color: #0d0d0d;
+  --secondary-color: #1c1c1c;
+  --accent-color: #c90933;
+  --secondary-accent-color: #4e4e4e;
+  --text-color: #fffdf7;
 }
-
-
 
 body {
-    background-color: var(--primary-color);
-    display: grid;
-    grid-template-columns: 1.2fr 6fr;
-    min-height: 100vh;
-    margin: 0 auto;
+  background-color: var(--primary-color);
+  display: grid;
+  grid-template-columns: 1.2fr 6fr;
+  min-height: 100vh;
+  margin: 0 auto;
 }
 
 main {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr) 2fr;
-    grid-template-rows: 1fr 4fr 1fr;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) 2fr;
+  grid-template-rows: 1fr 4fr 1fr;
 }
 
 .nav-container {
-    display: grid;
-    grid-template-rows: 1fr 1.75fr 1fr;
-    background-color: var(--secondary-color);
-    border-right-style: solid;
-    border-color: var(--secondary-accent-color);
-    border-width: 1.5px;
+  display: grid;
+  grid-template-rows: 1fr 1.75fr 1fr;
+  background-color: var(--secondary-color);
+  border-right-style: solid;
+  border-color: var(--secondary-accent-color);
+  border-width: 1.5px;
 }
 
 nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--secondary-color);
-    height: 100%;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--secondary-color);
+  height: 100%;
+  justify-content: space-around;
 }
 
 nav a {
-    margin: 0 auto;
-    font-family: "Roboto", sans-serif, Helvetica;
-    text-decoration: none;
-    color: var(--text-color);
-    padding: .5em 2em .5em 2em;
-    margin: 1em 0em 1em 0em;
-    border-bottom-style: solid;
-    border-color: var(--secondary-accent-color);
-    align-items: center;
-    justify-content: center;
+  margin: 0 auto;
+  font-family: "Roboto", sans-serif, Helvetica;
+  text-decoration: none;
+  color: var(--text-color);
+  padding: 0.5em 2em 0.5em 2em;
+  margin: 1em 0em 1em 0em;
+  border-bottom-style: solid;
+  border-color: var(--secondary-accent-color);
+  align-items: center;
+  justify-content: center;
 }
 
 nav a:hover {
-    color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 .fa-solid.fa-house,
@@ -69,61 +67,61 @@ nav a:hover {
 .fa-solid.fa-bars,
 .fa-solid.fa-briefcase,
 .fa-solid.fa-comments {
-    color: var(--text-color);
+  color: var(--text-color);
 }
 
-.home:hover>i,
-.about:hover>i,
-.services:hover>i,
-.portfolio:hover>i,
-.contact:hover>i {
-    color: var(--accent-color);
+.home:hover > i,
+.about:hover > i,
+.services:hover > i,
+.portfolio:hover > i,
+.contact:hover > i {
+  color: var(--accent-color);
 }
 
 .nav-button-container {
-    display: grid;
-    width: 100%;
-    justify-content: center;
-    grid-template-columns: 1fr 2fr 1fr;
+  display: grid;
+  width: 100%;
+  justify-content: center;
+  grid-template-columns: 1fr 2fr 1fr;
 }
 
 #portrait {
-    width: 50%;
-    grid-column: 3/4;
-    grid-row: 2/3;
-    justify-self: center;
-    align-self: center;
+  width: 50%;
+  grid-column: 3/4;
+  grid-row: 2/3;
+  justify-self: center;
+  align-self: center;
 }
 
 .intro {
-    color: var(--text-color);
-    grid-column: 1/3;
-    grid-row: 2/3;
-    height: 100%;
+  color: var(--text-color);
+  grid-column: 1/3;
+  grid-row: 2/3;
+  height: 100%;
 }
 
 h1 span {
-    color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 h2 span {
-    color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 .intro h1 {
-    font-family: "Oswald", "Roboto", sans-serif;
-    font-size: 3em;
-    margin-left: 2rem;
+  font-family: "Oswald", "Roboto", sans-serif;
+  font-size: 3em;
+  margin-left: 2rem;
 }
 
 .intro h2 {
-    font-family: "Roboto", sans-serif, Helvetica;
-    font-size: 2em;
-    margin-left: 2rem;
+  font-family: "Roboto", sans-serif, Helvetica;
+  font-size: 2em;
+  margin-left: 2rem;
 }
 
 .intro p {
-    font-family: "Roboto", sans-serif, Helvetica;
-    font-size: 1.5em;
-    margin-left: 2rem;
+  font-family: "Roboto", sans-serif, Helvetica;
+  font-size: 1.5em;
+  margin-left: 2rem;
 }
