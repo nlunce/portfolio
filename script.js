@@ -5,12 +5,13 @@ const services = document.querySelector('.services').className;
 const portfolio = document.querySelector('.portfolio').className;
 const contact = document.querySelector('.contact').className;
 
-const homeIcon = document.querySelector('.fa-house').className;
+const homeIcon = document.getElementsByClassName('fa-solid fa-house');
 const aboutIcon = document.querySelector('.fa-user').className;
 const servicesIcon = document.querySelector('.fa-bars').className;
 const portfolioIcon = document.querySelector('.fa-briefcase').className;
 const contactIcon = document.querySelector('.fa-comments').className;
 
+console.log(homeIcon);
 const navHighlight = function (navTitle, navIcon) {
   document.querySelector(`.${navTitle}`).style.color = 'var(--accent-color)';
   document.querySelector(`.${navIcon}`).style.color = 'var(--accent-color)';
