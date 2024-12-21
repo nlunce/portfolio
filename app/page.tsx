@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 export default function Home() {
   return (
     <section className='flex flex-col items-start justify-start h-screen bg-dark text-foreground px-6 md:px-12 lg:pl-64 lg:pt-48'>
