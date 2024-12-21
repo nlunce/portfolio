@@ -18,9 +18,11 @@ export default function Home() {
 
       {/* Instructions */}
       <div className='mt-4'>
+        {/* eslint-disable-next-line */}
         <p className='font-mono text-xs sm:text-sm lg:text-base text-foreground'>
           // complete the game to continue
         </p>
+        {/* eslint-disable-next-line */}
         <p className='font-mono text-xs sm:text-sm lg:text-base text-foreground'>
           // you can also see it on my GitHub page
         </p>
