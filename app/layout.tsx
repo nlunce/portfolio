@@ -15,7 +15,7 @@ export default function RootLayout({
     <html lang='en'>
       <body className='bg-dark text-foreground'>
         <Navbar />
-        <main className='p-6 h-[calc(100vh-3rem)]'>{children}</main>
+        <main className='h-full w-full'>{children}</main>
       </body>
     </html>
   );

@@ -22,8 +22,28 @@
   }
 }
 
+/* Ensure the canvas spans the viewport without causing scrollbars */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent scrolling */
+  height: 100%; /* Ensure the canvas covers the full height */
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Canvas-specific styles */
+canvas {
+  display: block; /* Remove any extra spacing around the canvas */
+  position: absolute; /* Allow it to span the entire viewport */
+  top: 0;
+  left: 0;
+  width: 100%; /* Ensure the canvas width fits the viewport */
+  height: 100%; /* Ensure the canvas height fits the viewport */
+  z-index: -1; /* Push it to the background */
 }
