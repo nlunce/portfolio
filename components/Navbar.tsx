@@ -6,7 +6,7 @@ const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <nav className='flex space-between border-b border-border'>
+    <nav className='flex space-between border-b border-border bg-background'>
       {/* Name and Navigation Link Section */}
 
       <div className='flex items-center h-12 bg-dark pl-6 w-full relative border-r-[1px] border-r-border'>

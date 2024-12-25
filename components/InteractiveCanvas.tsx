@@ -20,10 +20,10 @@ const InteractiveCanvas: React.FC = () => {
     };
 
     const params = {
-      pointsNumber: 30, // Number of points in the trail. Higher values create a longer trail.
-      widthFactor: 11, // Multiplier for the width of the trail lines. Higher values make the trail appear thicker.
+      pointsNumber: 15, // Number of points in the trail. Higher values create a longer trail.
+      widthFactor: 8, // Multiplier for the width of the trail lines. Higher values make the trail appear thicker.
       mouseThreshold: 0.9, // Sensitivity to mouse movement. Smaller values make the blob react to finer movements.
-      spring: 0.1, // Spring strength for the trail's movement. Higher values make the trail catch up faster to the pointer.
+      spring: 0.08, // Spring strength for the trail's movement. Higher values make the trail catch up faster to the pointer.
       friction: 0.5, // Friction applied to the trail's velocity. Lower values allow the trail to move faster and decay more slowly.
     };
 

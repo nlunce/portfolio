@@ -3,7 +3,7 @@ import InteractiveCanvas from '@/components/InteractiveCanvas';
 
 export default function page() {
   return (
-    <div>
+    <div className=' h-screen'>
       <InteractiveCanvas />
     </div>
   );
