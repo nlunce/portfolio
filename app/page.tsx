@@ -6,26 +6,24 @@ export default function Home() {
         Hi all. I am
       </p>
 
-      {/* Name */}
       <h1 className='font-mono text-3xl sm:text-5xl lg:text-6xl text-white mt-2'>
         Nathan Lunceford
       </h1>
 
-      {/* Title */}
       <h2 className='font-mono text-base sm:text-xl lg:text-2xl text-accent mt-2'>
         &gt; Software Developer and Mathematician
       </h2>
 
-      {/* Instructions */}
+      {/* eslint-disable-next-line */}
       <div className='mt-4'>
         <p className='font-mono text-xs sm:text-sm lg:text-base text-foreground'>
           // complete the game to continue
         </p>
+        {/* eslint-disable-next-line */}
         <p className='font-mono text-xs sm:text-sm lg:text-base text-foreground'>
           // you can also see it on my GitHub page
         </p>
 
-        {/* GitHub Link */}
         <p className='font-mono text-xs sm:text-sm lg:text-base mt-3'>
           <span className='text-accent-tertiary'>const</span>{' '}
           <span className='text-accent'>githubLink</span> ={' '}
