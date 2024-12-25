@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 export default function Home() {
   return (
     <section className='flex flex-col items-start justify-center text-foreground px-6 md:px-12 lg:pl-64 lg:pt-48'>
@@ -14,12 +16,11 @@ export default function Home() {
         &gt; Software Developer and Mathematician
       </h2>
 
-      {/* eslint-disable-next-line */}
       <div className='mt-4'>
         <p className='font-mono text-xs sm:text-sm lg:text-base text-foreground'>
           // complete the game to continue
         </p>
-        {/* eslint-disable-next-line */}
+
         <p className='font-mono text-xs sm:text-sm lg:text-base text-foreground'>
           // you can also see it on my GitHub page
         </p>
