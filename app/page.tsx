@@ -8,7 +8,7 @@ export default function Home() {
         Hi all. I am
       </p>
 
-      <h1 className=' text-7xl md:text-5xl lg:text-6xl text-white w-[80%] '>
+      <h1 className=' text-6xl md:text-5xl lg:text-6xl text-white w-[80%] '>
         Nathan Lunceford
       </h1>
 
