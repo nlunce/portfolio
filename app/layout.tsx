@@ -6,8 +6,7 @@ import { Fira_Code } from 'next/font/google';
 
 const firaCode = Fira_Code({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '700'],
-  variable: '--font-fira-code',
+  weight: ['300', '400', '500', '600', '700'],
 });
 
 export const metadata = {
@@ -21,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en' className={firaCode.variable}>
+    <html lang='en' className={firaCode.className}>
       <body className='bg-dark text-foreground flex flex-col min-h-screen relative'>
         {/* Navbar (no canvas effect underneath) */}
         <div className='relative z-10'>

@@ -9,7 +9,6 @@
   --accent-secondary: #fea55f; /* Secondary accent color */
   --accent-tertiary: #43d9ad; /* Tertiary accent color */
   --border: #1e2d3d; /* Border color */
-  --font-fira-code: 'Fira Code', monospace; /* Fira Code font */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -29,12 +28,12 @@ body {
   padding: 0;
   height: 100%;
   overflow-x: hidden; /* Prevent horizontal scrolling */
+  font-family: 'Fira Code', 'Courier New', monospace;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: var(--font-fira-code); /* Apply Fira Code globally */
 }
 
 canvas {

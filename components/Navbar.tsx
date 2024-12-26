@@ -17,7 +17,7 @@ const Navbar = () => {
       {/* Navbar Header: Name and Hamburger/X Toggle */}
       <div className='flex items-center h-12 bg-dark pl-5 md:pl-6 w-full relative border-r-[1px] border-r-border'>
         {/* Name Section */}
-        <div className='text-foreground flex w-full justify-between items-center font-mono text-md md:text-sm md:w-48 lg:w-64 md:border-r-[1px] border-border h-full'>
+        <div className='text-foreground flex w-full justify-between items-center  text-md md:text-sm md:w-48 lg:w-64 md:border-r-[1px] border-border h-full'>
           <div>nathan-lunceford</div>
 
           {/* Hamburger Menu Button (Mobile Only) */}
@@ -40,7 +40,7 @@ const Navbar = () => {
         <div className='relative md:flex hidden items-center h-full px-6 border-r-[1px] border-r-border'>
           <Link
             href='/'
-            className={`text-foreground text-sm font-mono hover:text-accent transition ${
+            className={`text-foreground text-sm  hover:text-accent transition ${
               pathname === '/' ? 'text-white' : ''
             }`}
           >
@@ -54,7 +54,7 @@ const Navbar = () => {
         <div className='relative md:flex hidden items-center h-full px-6 border-r-[1px] border-r-border'>
           <Link
             href='/about-me'
-            className={`text-foreground text-sm font-mono hover:text-accent transition ${
+            className={`text-foreground text-sm  hover:text-accent transition ${
               pathname === '/about-me' ? 'text-white' : ''
             }`}
           >
@@ -67,7 +67,7 @@ const Navbar = () => {
         <div className='relative md:flex hidden items-center h-full px-6 border-r-[1px] border-r-border'>
           <Link
             href='/projects'
-            className={`text-foreground text-sm font-mono hover:text-accent transition ${
+            className={`text-foreground text-sm  hover:text-accent transition ${
               pathname === '/projects' ? 'text-white' : ''
             }`}
           >
@@ -83,7 +83,7 @@ const Navbar = () => {
       <div className='relative md:flex hidden items-center justify-center h-12 px-6 border-border whitespace-nowrap'>
         <Link
           href='/contact-me'
-          className={`text-foreground text-sm font-mono hover:text-accent transition ${
+          className={`text-foreground text-sm  hover:text-accent transition ${
             pathname === '/contact-me' ? 'text-white' : ''
           }`}
         >
@@ -99,9 +99,7 @@ const Navbar = () => {
         <div className='fixed bg-background top-0 left-0 w-full   z-50 flex flex-col border-t border-border'>
           {/* Menu Header */}
           <div className='flex justify-between items-center h-12 px-5 border-b border-border'>
-            <div className='text-foreground font-mono text-md'>
-              nathan-lunceford
-            </div>
+            <div className='text-foreground  text-md'>nathan-lunceford</div>
             {/* Close button */}
             <button
               onClick={() => setIsOpen(false)}
@@ -115,7 +113,7 @@ const Navbar = () => {
           <div className='flex flex-col bg-dark w-full'>
             <Link
               href='/'
-              className={`text-foreground font-mono text-sm border-b border-border pl-5 py-4 text-white hover:text-accent ${
+              className={`text-foreground  text-sm border-b border-border pl-5 py-4 text-white hover:text-accent ${
                 pathname === '/' ? 'text-accent-secondary' : ''
               }`}
               onClick={() => setIsOpen(false)}
@@ -124,7 +122,7 @@ const Navbar = () => {
             </Link>
             <Link
               href='/about-me'
-              className={`text-foreground font-mono text-sm border-b border-border pl-5 py-4 text-white hover:text-accent ${
+              className={`text-foreground  text-sm border-b border-border pl-5 py-4 text-white hover:text-accent ${
                 pathname === '/about-me' ? 'text-accent-secondary' : ''
               }`}
               onClick={() => setIsOpen(false)}
@@ -133,7 +131,7 @@ const Navbar = () => {
             </Link>
             <Link
               href='/projects'
-              className={`text-foreground font-mono text-sm border-b border-border pl-5 py-4  text-white hover:text-accent ${
+              className={`text-foreground  text-sm border-b border-border pl-5 py-4  text-white hover:text-accent ${
                 pathname === '/projects' ? 'text-accent-secondary' : ''
               }`}
               onClick={() => setIsOpen(false)}
@@ -142,7 +140,7 @@ const Navbar = () => {
             </Link>
             <Link
               href='/contact-me'
-              className={`text-foreground font-mono text-sm border-b border-border pl-5 py-4 text-white hover:text-accent${
+              className={`text-foreground  text-sm border-b border-border pl-5 py-4 text-white hover:text-accent${
                 pathname === '/contact-me' ? 'text-accent-secondary' : ''
               }`}
               onClick={() => setIsOpen(false)}

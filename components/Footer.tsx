@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <footer className='flex items-center justify-between border-t border-border bg-background h-12 text-sm font-mono px-6'>
+    <footer className='flex items-center justify-between border-t border-border bg-background h-12 text-sm  px-6'>
       {/* Left Section */}
       <div className='flex items-center gap-4 border-r pr-6 h-full border-border'>
         <span>find me on:</span>
