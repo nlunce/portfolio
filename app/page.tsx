@@ -38,7 +38,7 @@ export default function Home() {
           </a>
         </p>
       </div>
-      <div className='mt-auto block md:hidden pb-20'>
+      <div className='mt-auto block md:hidden pb-36'>
         <p className=' text-lg md:text-base lg:text-base text-foreground'>
           // find my profile on Github:
         </p>
