@@ -2,6 +2,13 @@ import Navbar from '@/components/Navbar';
 import './globals.css';
 import Footer from '@/components/Footer';
 import InteractiveCanvas from '@/components/InteractiveCanvas';
+import { Fira_Code } from 'next/font/google';
+
+const firaCode = Fira_Code({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '700'],
+  variable: '--font-fira-code',
+});
 
 export const metadata = {
   title: 'Portfolio',
@@ -14,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en'>
+    <html lang='en' className={firaCode.variable}>
       <body className='bg-dark text-foreground flex flex-col min-h-screen relative'>
         {/* Navbar (no canvas effect underneath) */}
         <div className='relative z-10'>
