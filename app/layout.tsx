@@ -21,20 +21,22 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en' className={firaCode.className}>
-      <body className='bg-dark text-foreground flex flex-col min-h-screen relative'>
-        {/* Navbar (no canvas effect underneath) */}
-        <div className='relative z-10'>
+      <body className='bg-dark text-foreground flex flex-col min-h-screen'>
+        {/* Navbar */}
+        <div className='z-10'>
           <Navbar />
         </div>
 
-        {/* Interactive Canvas */}
-        <div className='absolute top-[64px] left-0 w-full h-[calc(100%-64px)] -z-10'>
-          {/* Adjust top offset to match Navbar height */}
-          <InteractiveCanvas />
-        </div>
+        {/* Main Content with Interactive Canvas */}
+        <div className='relative flex-grow flex'>
+          {/* Interactive Canvas */}
+          <div className='absolute inset-0 -z-10'>
+            <InteractiveCanvas />
+          </div>
 
-        {/* Main content */}
-        <main className='flex-grow'>{children}</main>
+          {/* Main Content */}
+          <main className='flex-grow'>{children}</main>
+        </div>
 
         {/* Footer */}
         <Footer />
