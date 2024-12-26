@@ -2,15 +2,12 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
-import { IoMdClose } from 'react-icons/io'; // Importing the close icon from react-icons
+import { IoMdClose } from 'react-icons/io';
 import { RxHamburgerMenu } from 'react-icons/rx';
-import Footer from './Footer';
 
 const Navbar = () => {
-  // State to manage whether the mobile menu is open
   const [isOpen, setIsOpen] = useState(false);
 
-  // Get the current route pathname for active link highlighting
   const pathname = usePathname();
 
   return (
