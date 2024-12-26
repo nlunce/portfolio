@@ -95,7 +95,7 @@ const Navbar = () => {
 
       {/* Fullscreen Mobile Menu */}
       {isOpen && (
-        <div className='fixed bg-background top-0 left-0 w-full h-full  z-50 flex flex-col border-t border-border'>
+        <div className='fixed bg-background top-0 left-0 w-full h-full  z-50 flex flex-col '>
           {/* Menu Header */}
           <div className='flex justify-between items-center h-12 px-5 border-b border-border'>
             <div className='text-foreground  text-md'>nathan-lunceford</div>
