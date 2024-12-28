@@ -29,18 +29,14 @@ export default function RootLayout({
           <Navbar />
         </div>
 
-        {/* Main Content with Interactive Canvas */}
         <div className='relative flex-grow flex'>
-          {/* Interactive Canvas */}
           <div className='absolute inset-0 -z-10'>
             <InteractiveCanvas />
           </div>
 
-          {/* Main Content */}
           <main className='flex-grow'>{children}</main>
         </div>
 
-        {/* Footer */}
         <Footer />
       </body>
     </html>
