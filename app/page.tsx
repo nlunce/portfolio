@@ -13,7 +13,7 @@ export default function Home() {
       </h1>
 
       <h2 className=' w-[80%] text-accent-tertiary text-xl md:text-xl lg:text-2xl md:text-accent mt-2'>
-        &gt; Software Developer and Mathematician
+        &gt; Full-Stack Software Engineer and Mathematician
       </h2>
 
       <div className='mt-48 md:mt-4 hidden md:block'>

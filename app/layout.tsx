@@ -1,3 +1,5 @@
+/* ./app/layout.tsx */
+
 import Navbar from '@/components/Navbar';
 import './globals.css';
 import Footer from '@/components/Footer';
@@ -23,7 +25,7 @@ export default function RootLayout({
     <html lang='en' className={firaCode.className}>
       <body className='bg-dark text-foreground flex flex-col min-h-screen'>
         {/* Navbar */}
-        <div className='z-10'>
+        <div className='z-10 w-full'>
           <Navbar />
         </div>
 

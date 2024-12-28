@@ -1,55 +1,65 @@
 'use client';
 import Link from 'next/link';
+import React from 'react';
+import { BsTwitterX } from 'react-icons/bs';
 
-const Footer = () => {
+const leftSocialLinks = [
+  {
+    href: 'https://x.com/lunceford_',
+    className:
+      'flex items-center justify-center w-20 h-full border-r border-border bg-background ',
+    icon: (
+      <BsTwitterX className='h-4 w-4 text-foreground hover:text-white transition-colors hover:scale-110' />
+    ),
+  },
+  {
+    href: 'https://www.linkedin.com/in/nathan-lunceford/',
+    className:
+      'flex items-center justify-center w-20 h-full border-r border-border bg-background ',
+    icon: (
+      <svg
+        xmlns='http://www.w3.org/2000/svg'
+        fill='currentColor'
+        viewBox='0 0 24 24'
+        className='h-4 w-4 text-foreground hover:text-white transition-colors hover:scale-110'
+      >
+        <path d='M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.28c-.97 0-1.75-.78-1.75-1.75s.78-1.75 1.75-1.75 1.75.78 1.75 1.75-.78 1.75-1.75 1.75zm13.5 10.28h-3v-4.5c0-1.11-.9-2-2-2s-2 .89-2 2v4.5h-3v-9h3v1.27c.88-1.2 2.22-1.77 3.5-1.77 2.21 0 4 1.79 4 4v5.5z' />
+      </svg>
+    ),
+  },
+];
+
+export default function Footer() {
   return (
-    <footer className='md:flex hidden items-center justify-between border-t border-border bg-background h-12 text-sm  px-6'>
-      {/* Left Section */}
-      <div className='flex items-center gap-4 border-r pr-6 h-full border-border'>
-        <span>find me on:</span>
-        <Link
-          href='https://twitter.com'
-          target='_blank'
-          rel='noopener noreferrer'
-          className='hover:text-white'
-        >
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            fill='currentColor'
-            viewBox='0 0 24 24'
-            width='16'
-            height='16'
-            className='hover:scale-110 transition-transform'
+    <footer className='md:flex hidden items-center justify-between border-t border-border bg-background h-12 text-sm'>
+      {/* Left side with columns */}
+      <div className='flex items-center h-full'>
+        {/* "find me in:" column */}
+        <div className='flex items-center justify-center h-full px-6  border-r border-border'>
+          <span>find me on:</span>
+        </div>
+
+        {/* Each social link as its own column */}
+        {leftSocialLinks.map(({ href, icon }, idx) => (
+          <Link
+            key={idx}
+            href={href}
+            target='_blank'
+            rel='noopener noreferrer'
+            className='flex items-center justify-center h-full px-4 border-r border-border hover:text-white'
           >
-            <path d='M24 4.557a9.94 9.94 0 01-2.828.775A4.93 4.93 0 0023.337 3a9.874 9.874 0 01-3.127 1.194A4.916 4.916 0 0016.616 3c-2.735 0-4.952 2.224-4.952 4.961 0 .39.042.768.127 1.134C7.728 8.82 4.1 6.882 1.671 3.9a4.96 4.96 0 00-.671 2.492c0 1.719.872 3.234 2.188 4.122a4.902 4.902 0 01-2.24-.616c-.055 2.002 1.411 3.908 3.498 4.328a4.93 4.93 0 01-2.23.085c.626 1.967 2.444 3.403 4.598 3.444A9.864 9.864 0 010 19.54a13.946 13.946 0 007.548 2.213c9.142 0 14.307-7.721 14.307-14.418 0-.22-.005-.44-.014-.658A10.243 10.243 0 0024 4.557z' />
-          </svg>
-        </Link>
-        <Link
-          href='https://facebook.com'
-          target='_blank'
-          rel='noopener noreferrer'
-          className='hover:text-white'
-        >
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            fill='currentColor'
-            viewBox='0 0 24 24'
-            width='16'
-            height='16'
-            className='hover:scale-110 transition-transform'
-          >
-            <path d='M22.675 0H1.326C.595 0 0 .597 0 1.333v21.333C0 23.404.595 24 1.326 24h11.49v-9.333H9.896v-3.645h2.92V8.49c0-2.888 1.745-4.477 4.298-4.477 1.222 0 2.27.089 2.576.13v2.983h-1.768c-1.386 0-1.654.658-1.654 1.622v2.125h3.307l-.431 3.645h-2.876V24h5.647c.73 0 1.325-.596 1.325-1.333V1.333C24 .597 23.405 0 22.675 0z' />
-          </svg>
-        </Link>
+            {icon}
+          </Link>
+        ))}
       </div>
 
-      {/* Right Section */}
-      <div className='flex items-center h-full pl-6 border-l border-border'>
+      {/* Right side (GitHub) */}
+      <div className='flex items-center h-full px-6 border-l border-border'>
         <Link
           href='https://github.com/nlunce'
           target='_blank'
           rel='noopener noreferrer'
-          className='flex items-center hover:scale-110 transition-transform hover:text-white'
+          className='flex items-center hover:scale-105 transition-transform hover:text-white'
         >
           {/* GitHub Text */}
           <span>@nlunce</span>
@@ -69,6 +79,4 @@ const Footer = () => {
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}
