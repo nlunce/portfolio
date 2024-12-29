@@ -14,6 +14,7 @@ import {
   FaHtml5,
   FaCss3,
   FaJava,
+  FaMarkdown,
 } from 'react-icons/fa';
 
 import { RiNextjsFill, RiTailwindCssFill } from 'react-icons/ri';
@@ -25,9 +26,9 @@ import {
   SiPandas,
   SiPolars,
   SiDatabricks,
-  SiDotnet,
   SiTypescript,
   SiJavascript,
+  SiLatex,
 } from 'react-icons/si';
 import { IoCaretDownSharp } from 'react-icons/io5';
 
@@ -51,8 +52,7 @@ const techItems: TechItem[] = [
   { name: 'JavaScript', Icon: SiJavascript },
 
   /* Additional backend stacks & popular languages */
-  { name: '.NET', Icon: SiDotnet },
-  { name: 'Java', Icon: FaJava },
+
   { name: 'Go', Icon: FaGolang },
 
   /* Identity/Auth */
@@ -68,6 +68,8 @@ const techItems: TechItem[] = [
   { name: 'Pandas', Icon: SiPandas },
   { name: 'Databricks', Icon: SiDatabricks },
   { name: 'Quarto', Icon: SiQuarto },
+  { name: 'Markdown', Icon: FaMarkdown },
+  { name: 'LaTeX', Icon: SiLatex },
 ];
 
 export default function ProjectsSidebar() {

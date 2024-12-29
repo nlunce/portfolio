@@ -7,8 +7,9 @@
       "AWS",
       "React",
       "NEXT.JS",
-      "JavaScript",
       "TypeScript",
+      "JavaScript",
+      "Python",
       "HTML",
       "Tailwind",
       "CSS"
@@ -34,10 +35,10 @@
   },
 
   {
-    "title": "API Integration",
-    "description": "Integrate APIs seamlessly with this tool.",
-    "imageSrc": "https://via.placeholder.com/400x200",
-    "technologies": ["Docker", "Terraform", "Java"],
-    "link": "https://example.com/api-integration"
+    "title": "_cs-math-notes",
+    "description": "A Quarto website showcasing comprehensive notes from my bachelor's degree in Computer Science with a minor in Mathematics.",
+    "imageSrc": "cs-math-notes",
+    "technologies": ["Quarto", "Python", "LaTeX", "Markdown", "HTML", "CSS"],
+    "link": "https://nlunce.github.io/notes"
   }
 ]

@@ -8,7 +8,7 @@ export type Technology =
   | 'TypeScript'
   | 'JavaScript'
   | '.NET'
-  | 'Java'
+  | 'Markdown'
   | 'Go'
   | 'Auth0'
   | 'HTML'
@@ -17,4 +17,5 @@ export type Technology =
   | 'Polars'
   | 'Pandas'
   | 'Databricks'
-  | 'Quarto';
+  | 'Quarto'
+  | 'LaTeX';
