@@ -57,7 +57,7 @@ export default function ProjectCard({
         {/* Description */}
         <div className='p-4 flex flex-col justify-between flex-1'>
           <p className='text-off-white text-xs mb-4'>{description}</p>
-          {/* Button */}
+
           <Link
             href={link}
             target='_blank'
