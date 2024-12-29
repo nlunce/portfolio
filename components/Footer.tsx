@@ -34,8 +34,8 @@ export default function Footer() {
     <footer className='md:flex hidden items-center justify-between border-t border-border bg-background h-12 text-sm'>
       {/* Left side with columns */}
       <div className='flex items-center h-full'>
-        {/* "find me in:" column */}
-        <div className='flex items-center justify-center h-full px-6  border-r border-border'>
+        {/* "find me on:" column */}
+        <div className='flex items-center justify-center h-full px-6 border-r border-border'>
           <span>find me on:</span>
         </div>
 
@@ -46,35 +46,43 @@ export default function Footer() {
             href={href}
             target='_blank'
             rel='noopener noreferrer'
-            className='flex items-center justify-center h-full px-4 border-r border-border hover:text-off-white'
+            className='group flex items-center justify-center h-full px-4 border-r border-border hover:bg-border transition'
           >
-            {icon}
+            {/* Icon scales and turns white when the container is hovered */}
+            {React.cloneElement(icon, {
+              className: `${icon.props.className} group-hover:text-off-white group-hover:scale-110 transition-transform`,
+            })}
           </Link>
         ))}
       </div>
 
       {/* Right side (GitHub) */}
-      <div className='flex items-center h-full px-6 border-l border-border'>
+      <div className='flex items-center h-full border-l border-border'>
         <Link
           href='https://github.com/nlunce'
           target='_blank'
           rel='noopener noreferrer'
-          className='flex items-center hover:scale-105 transition-transform hover:text-off-white'
+          className='group flex items-center w-full h-full px-6 hover:bg-border transition'
         >
-          {/* GitHub Text */}
-          <span>@nlunce</span>
+          {/* Wrapper for scaling effect */}
+          <div className='flex items-center gap-2 group-hover:scale-105 transition-transform'>
+            {/* GitHub Text */}
+            <span className='text-foreground group-hover:text-off-white transition-colors'>
+              @nlunce
+            </span>
 
-          {/* GitHub Icon */}
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            fill='currentColor'
-            viewBox='0 0 24 24'
-            width='16'
-            height='16'
-            className='ml-2'
-          >
-            <path d='M12 .297c-6.63 0-12 5.373-12 12 0 5.302 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.234c-3.338.724-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.757-1.333-1.757-1.089-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.775.418-1.305.763-1.605-2.665-.3-5.466-1.334-5.466-5.93 0-1.31.468-2.381 1.235-3.221-.123-.302-.535-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.52 11.52 0 013.003-.404c1.018.005 2.042.138 3.003.404 2.292-1.552 3.3-1.23 3.3-1.23.653 1.653.241 2.874.118 3.176.768.84 1.235 1.911 1.235 3.221 0 4.609-2.803 5.625-5.476 5.921.43.37.815 1.102.815 2.222v3.293c0 .319.218.694.825.577C20.565 22.092 24 17.593 24 12.297c0-6.627-5.373-12-12-12z' />
-          </svg>
+            {/* GitHub Icon */}
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              fill='currentColor'
+              viewBox='0 0 24 24'
+              width='16'
+              height='16'
+              className='text-foreground group-hover:text-off-white transition-colors'
+            >
+              <path d='M12 .297c-6.63 0-12 5.373-12 12 0 5.302 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.234c-3.338.724-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.757-1.333-1.757-1.089-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.775.418-1.305.763-1.605-2.665-.3-5.466-1.334-5.466-5.93 0-1.31.468-2.381 1.235-3.221-.123-.302-.535-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.52 11.52 0 013.003-.404c1.018.005 2.042.138 3.003.404 2.292-1.552 3.3-1.23 3.3-1.23.653 1.653.241 2.874.118 3.176.768.84 1.235 1.911 1.235 3.221 0 4.609-2.803 5.625-5.476 5.921.43.37.815 1.102.815 2.222v3.293c0 .319.218.694.825.577C20.565 22.092 24 17.593 24 12.297c0-6.627-5.373-12-12-12z' />
+            </svg>
+          </div>
         </Link>
       </div>
     </footer>

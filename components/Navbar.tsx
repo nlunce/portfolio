@@ -2,6 +2,7 @@
 
 'use client';
 
+import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
@@ -88,40 +89,38 @@ export default function Navbar() {
         {desktopLinks.map(({ label, href }) => {
           const active = pathname === href;
           return (
-            <div
+            <Link
               key={href}
-              className='relative md:flex hidden items-center h-full px-6 border-r-[1px] border-r-border'
+              href={href}
+              className={`relative md:flex hidden items-center h-full px-6 border-r-[1px] border-r-border transition ${
+                active
+                  ? 'bg-background text-off-white'
+                  : 'hover:bg-border hover:text-accent text-foreground'
+              }`}
             >
-              <Link
-                href={href}
-                className={`text-foreground text-sm hover:text-accent transition ${
-                  active ? 'text-off-white' : ''
-                }`}
-              >
-                {label}
-              </Link>
+              <span className='text-sm'>{label}</span>
               {active && (
                 <span className='absolute -bottom-[2px] left-0 w-full h-[2px] bg-accent-secondary rounded-md' />
               )}
-            </div>
+            </Link>
           );
         })}
       </div>
 
       {/* Contact Link (Desktop Only) */}
-      <div className='relative md:flex hidden items-center justify-center h-12 px-6 border-border whitespace-nowrap'>
-        <Link
-          href='/contact-me'
-          className={`text-foreground text-sm  hover:text-accent transition ${
-            pathname === '/contact-me' ? 'text-off-white' : ''
-          }`}
-        >
-          _contact-me
-        </Link>
+      <Link
+        href='/contact-me'
+        className={`relative md:flex hidden items-center justify-center h-12 px-6 border-border whitespace-nowrap transition ${
+          pathname === '/contact-me'
+            ? 'bg-background text-off-white'
+            : 'hover:bg-border hover:text-accent text-foreground'
+        }`}
+      >
+        <span className='text-sm'>_contact-me</span>
         {pathname === '/contact-me' && (
           <span className='absolute -bottom-[2px] left-0 w-full h-[2px] bg-accent-secondary rounded-md' />
         )}
-      </div>
+      </Link>
 
       {/* Fullscreen Mobile Menu */}
       {isOpen && (
@@ -142,8 +141,8 @@ export default function Navbar() {
                 <Link
                   key={href}
                   href={href}
-                  className={`text-foreground text-md border-b border-border pl-5 py-4 text-off-white hover:text-accent ${
-                    active ? 'text-accent-secondary' : ''
+                  className={`flex items-center text-foreground text-md border-b border-border pl-5 py-4 hover:bg-border ${
+                    active ? 'text-accent-secondary bg-background' : ''
                   }`}
                   onClick={() => setIsOpen(false)}
                 >
@@ -168,9 +167,15 @@ export default function Navbar() {
                   href={href}
                   target='_blank'
                   rel='noopener noreferrer'
-                  className={className}
+                  className={`${className} hover:bg-border group transition`}
                 >
-                  {icon}
+                  {/* Entire container is a hoverable group */}
+                  <div className='flex items-center justify-center w-full h-full'>
+                    {/* Icon responds to parent hover */}
+                    {React.cloneElement(icon, {
+                      className: `${icon.props.className} group-hover:text-off-white transition`,
+                    })}
+                  </div>
                 </Link>
               ))}
             </div>

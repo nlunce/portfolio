@@ -5,7 +5,6 @@ import React from 'react';
 
 // Icons
 import {
-  FaCaretDown,
   FaPython,
   FaAws,
   FaDocker,
@@ -15,7 +14,7 @@ import {
   FaJava,
 } from 'react-icons/fa';
 import { RiNextjsFill, RiTailwindCssFill } from 'react-icons/ri';
-import { FaGolang, FaCheck } from 'react-icons/fa6';
+import { FaGolang } from 'react-icons/fa6';
 import {
   SiAuth0,
   SiTerraform,
@@ -26,7 +25,7 @@ import {
   SiDotnet,
   SiTypescript,
 } from 'react-icons/si';
-import { IoLogoJavascript } from 'react-icons/io5';
+import { IoLogoJavascript, IoCaretDownSharp } from 'react-icons/io5';
 
 interface TechItem {
   name: string;
@@ -82,8 +81,8 @@ export default function ProjectsSidebar() {
       <nav>
         {/* Heading row */}
         <div className='flex items-center py-2 border-b border-border px-6'>
-          <FaCaretDown />
-          <span className='text-foreground text-sm pl-1'>projects</span>
+          <IoCaretDownSharp className='text-off-white h-3 w-3 mr-1' />
+          <span className='text-off-white text-sm pl-1'>projects</span>
         </div>
 
         {/* Mapped tech items */}
