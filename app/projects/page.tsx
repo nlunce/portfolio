@@ -1,5 +1,5 @@
-'use client';
 /* app/projects/page.tsx */
+'use client';
 
 import React from 'react';
 import ProjectsSidebar from '@/components/sidebars/projects-sidebar/ProjectsSidebar';
@@ -52,14 +52,14 @@ const Content = () => {
             </span>{' '}
             from{' '}
             <span className='text-accent-secondary'>
-              '@nathan-lunceford/projects'
+              &#39;@nathan-lunceford/projects&#39;
             </span>
           </div>
         ) : (
           <div className='text-accent-tertiary'>
-            import <span className='text-accent'>{'*'}</span> from{' '}
+            import <span className='text-accent'>*</span> from{' '}
             <span className='text-accent-secondary'>
-              '@nathan-lunceford/projects'
+              &#39;@nathan-lunceford/projects&#39;
             </span>
           </div>
         )}
