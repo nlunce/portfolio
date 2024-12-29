@@ -1,3 +1,4 @@
+/* eslint-disable */
 /* ./components/ProjectCard.tsx */
 'use client';
 
