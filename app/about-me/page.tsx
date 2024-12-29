@@ -1,5 +1,5 @@
 import React from 'react';
-import AboutMeSidebar from '@/components/sidebar/AboutMeSidebar';
+import AboutMeSidebar from '@/components/sidebars/AboutMeSidebar';
 
 export default function AboutMePage() {
   return (

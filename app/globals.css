@@ -15,6 +15,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #011627; /* Dark mode background */
+    --background-dark: #011221;
     --foreground: #607b96; /* Default text color */
     --accent: #4d5bce; /* Primary accent color */
     --accent-secondary: #fea55f; /* Secondary accent color */

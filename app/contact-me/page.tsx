@@ -1,5 +1,5 @@
 import React from 'react';
-import ContactMeSidebar from '@/components/sidebar/ContactMeSidebar';
+import ContactMeSidebar from '@/components/sidebars/ContactMeSidebar';
 
 export default function ContactMePage() {
   return (

@@ -1,0 +1,43 @@
+[
+  {
+    "title": "_luxorum",
+    "description": "Luxorum is a web application I developed to facilitate direct connections between customers and solar dealers, providing streamlined communication and personalized quote generation.",
+    "imageSrc": "luxorum-landing",
+    "technologies": [
+      "AWS",
+      "React",
+      "NEXT.JS",
+      "JavaScript",
+      "TypeScript",
+      "HTML",
+      "Tailwind",
+      "CSS"
+    ],
+    "link": "https://luxorum.dev"
+  },
+
+  {
+    "title": "_inegrity",
+    "description": "A budgeting web app with a dashboard, developed in under 14 hours with two partners for the 2024 Fall BYUI Hackathon, winning second place.",
+    "imageSrc": "inegrity-landing",
+    "technologies": [
+      "Auth0",
+      "Python",
+      "Pandas",
+      "React",
+      "NEXT.JS",
+      "CSS",
+      "JavaScript",
+      "TypeScript"
+    ],
+    "link": "https://www.inegrity.online"
+  },
+
+  {
+    "title": "API Integration",
+    "description": "Integrate APIs seamlessly with this tool.",
+    "imageSrc": "https://via.placeholder.com/400x200",
+    "technologies": ["Docker", "Terraform", "Java"],
+    "link": "https://example.com/api-integration"
+  }
+]
