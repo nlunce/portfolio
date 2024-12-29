@@ -3,11 +3,11 @@
 export default function Home() {
   return (
     <section className='flex h-full md:h-auto flex-col items-start justify-center text-foreground p-10 pt-20 md:px-28 md:py-32 lg:pl-64 lg:pt-48'>
-      <p className=' text-xl md:text-sm lg:text-base text-white'>
+      <p className=' text-xl md:text-sm lg:text-base text-off-white'>
         Hi all. I am
       </p>
 
-      <h1 className=' text-6xl md:text-5xl lg:text-6xl text-white w-[80%] '>
+      <h1 className=' text-6xl md:text-5xl lg:text-6xl text-off-white w-[80%] '>
         Nathan Lunceford
       </h1>
 

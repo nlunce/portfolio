@@ -15,6 +15,7 @@ export default {
         'accent-secondary': 'var(--accent-secondary)',
         'accent-tertiary': 'var(--accent-tertiary)',
         border: 'var(--border)', // Border color
+        'off-white': 'var(--off-white)',
       },
     },
   },

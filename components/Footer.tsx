@@ -9,7 +9,7 @@ const leftSocialLinks = [
     className:
       'flex items-center justify-center w-20 h-full border-r border-border bg-background ',
     icon: (
-      <BsTwitterX className='h-4 w-4 text-foreground hover:text-white transition-colors hover:scale-110' />
+      <BsTwitterX className='h-4 w-4 text-foreground hover:text-off-white transition-colors hover:scale-110' />
     ),
   },
   {
@@ -21,7 +21,7 @@ const leftSocialLinks = [
         xmlns='http://www.w3.org/2000/svg'
         fill='currentColor'
         viewBox='0 0 24 24'
-        className='h-4 w-4 text-foreground hover:text-white transition-colors hover:scale-110'
+        className='h-4 w-4 text-foreground hover:text-off-white transition-colors hover:scale-110'
       >
         <path d='M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.28c-.97 0-1.75-.78-1.75-1.75s.78-1.75 1.75-1.75 1.75.78 1.75 1.75-.78 1.75-1.75 1.75zm13.5 10.28h-3v-4.5c0-1.11-.9-2-2-2s-2 .89-2 2v4.5h-3v-9h3v1.27c.88-1.2 2.22-1.77 3.5-1.77 2.21 0 4 1.79 4 4v5.5z' />
       </svg>
@@ -46,7 +46,7 @@ export default function Footer() {
             href={href}
             target='_blank'
             rel='noopener noreferrer'
-            className='flex items-center justify-center h-full px-4 border-r border-border hover:text-white'
+            className='flex items-center justify-center h-full px-4 border-r border-border hover:text-off-white'
           >
             {icon}
           </Link>
@@ -59,7 +59,7 @@ export default function Footer() {
           href='https://github.com/nlunce'
           target='_blank'
           rel='noopener noreferrer'
-          className='flex items-center hover:scale-105 transition-transform hover:text-white'
+          className='flex items-center hover:scale-105 transition-transform hover:text-off-white'
         >
           {/* GitHub Text */}
           <span>@nlunce</span>

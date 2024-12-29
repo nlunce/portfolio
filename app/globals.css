@@ -9,6 +9,7 @@
   --accent-secondary: #fea55f; /* Secondary accent color */
   --accent-tertiary: #43d9ad; /* Tertiary accent color */
   --border: #1e2d3d; /* Border color */
+  --off-white: #f2f0ef;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,6 +20,7 @@
     --accent-secondary: #fea55f; /* Secondary accent color */
     --accent-tertiary: #43d9ad; /* Tertiary accent color */
     --border: #1e2d3d; /* Border color */
+    --off-white: #f2f0ef;
   }
 }
 
