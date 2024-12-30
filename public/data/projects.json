@@ -1,7 +1,7 @@
 [
   {
     "title": "_luxorum",
-    "description": "Luxorum is a web application I developed to facilitate direct connections between customers and solar dealers, providing streamlined communication and personalized quote generation.",
+    "description": "Luxorum is a web application I developed to facilitate direct connections between customers and solar installers, providing streamlined communication and personalized quote generation.",
     "imageSrc": "luxorum-landing",
     "technologies": [
       "AWS",
@@ -32,6 +32,14 @@
       "TypeScript"
     ],
     "link": "https://www.inegrity.online"
+  },
+
+  {
+    "title": "_weather-analytics",
+    "description": "This project provides detailed weather data analytics and visualizations for all Brigham Young University campuses. It features interactive graphs, charts, and metrics to help users analyze and interpret both historical and real-time weather data effectively.",
+    "imageSrc": "weather-app",
+    "technologies": ["Python", "Streamlit", "Docker", "Pandas"],
+    "link": "https://huggingface.co/spaces/nathanlunceford/weather_analytics_byu"
   },
 
   {
