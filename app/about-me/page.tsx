@@ -7,7 +7,7 @@ export default function AboutMePage() {
       <AboutMeSidebar />
 
       <section className='flex-1  p-6'>
-        <h1 className='text-foreground text-2xl mb-4'>About me</h1>
+        <h1 className='text-foreground text-2xl mb-4'>Coming soon</h1>
       </section>
     </div>
   );
