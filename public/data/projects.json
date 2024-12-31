@@ -44,9 +44,9 @@
   },
 
   {
-    "title": "_coming-soon",
+    "title": "_cs-math-notes",
     "description": "A Quarto website showcasing comprehensive notes from my bachelor's degree in Computer Science with a minor in Mathematics.",
-    "imageSrc": "coming-soon",
+    "imageSrc": "cs-math-notes",
     "technologies": ["Quarto", "Python", "LaTeX", "Markdown", "HTML", "CSS"],
     "link": "https://nlunce.github.io/notes"
   },
