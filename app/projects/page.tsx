@@ -3,10 +3,7 @@
 
 import React from 'react';
 import ProjectsSidebar from '@/components/sidebars/projects-sidebar/ProjectsSidebar';
-import {
-  ProjectsSidebarProvider,
-  useProjectsSidebar,
-} from '@/components/sidebars/projects-sidebar/ProjectsSidebarContext';
+import { ProjectsSidebarProvider } from '@/components/sidebars/projects-sidebar/ProjectsSidebarContext';
 import Projects from '@/components/Projects';
 import { IoMdClose } from 'react-icons/io';
 
@@ -22,8 +19,6 @@ export default function ProjectsPage() {
 }
 
 const Content = () => {
-  const { checkedItems } = useProjectsSidebar();
-
   return (
     <div className='flex-1 text-sm text-foreground'>
       <div className='flex items-center'>
