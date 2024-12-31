@@ -36,36 +36,6 @@ const Content = () => {
         <div className='flex border-b border-border w-full h-[2.30625rem] items-center bg-background'></div>
       </div>
 
-      <div className='px-6 py-4'>
-        {checkedItems.length > 0 ? (
-          <div className='text-accent-tertiary'>
-            import{' '}
-            <span className='text-accent-tertiary'>
-              {'{ '}
-              {checkedItems.map((item, index) => (
-                <span key={item} className='text-off-white'>
-                  {item}
-                  {index < checkedItems.length - 1 ? ', ' : ''}
-                </span>
-              ))}
-              {' }'}
-            </span>{' '}
-            from{' '}
-            <span className='text-accent-secondary'>
-              &#39;@nathan-lunceford/projects&#39;
-            </span>
-          </div>
-        ) : (
-          <div className='text-accent-tertiary'>
-            import <span className='text-accent'>*</span> from{' '}
-            <span className='text-accent-secondary'>
-              &#39;@nathan-lunceford/projects&#39;
-            </span>
-          </div>
-        )}
-      </div>
-
-      {/* Render Projects */}
       <Projects />
     </div>
   );

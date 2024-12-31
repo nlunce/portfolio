@@ -33,18 +33,18 @@ export default function ProjectCard({
       : technologies.slice(0, 4);
 
   return (
-    <div className='relative w-80'>
-      {/* Title Section */}
-      <div className='absolute -top-8 left-0'>
-        <h3 className='text-accent text-lg font-bold'>
-          {title} <span className='text-foreground'>// {subtitle}</span>
+    <div className='relative w-full     flex items-start'>
+      <div className='absolute -top-9 lg:-top-8 left-0 w-64'>
+        <h3 className='text-accent text-xl lg:text-lg font-bold whitespace-nowrap flex w-full'>
+          {title} <span className='text-foreground'> &nbsp;// {subtitle}</span>
         </h3>
       </div>
+      {/* Main Card */}
+      <div className='relative w-full h-full flex flex-col bg-background-dark rounded-xl shadow-md border border-border overflow-hidden'>
+        {/* Title Section */}
 
-      {/* Card */}
-      <div className='w-full h-96 flex flex-col bg-background-dark rounded-xl shadow-md border border-border overflow-hidden'>
         {/* Cloudinary Image */}
-        <div className='relative h-48'>
+        <div className='relative h-32 sm:h-38 md:h-32 xl:h-40'>
           <CldImage
             src={imageSrc}
             width='800'
@@ -70,8 +70,8 @@ export default function ProjectCard({
         </div>
       </div>
 
-      {/* Technologies Icons */}
-      <div className='absolute top-4 -right-8 flex flex-col space-y-2'>
+      {/* Technologies Icons Container */}
+      <div className='flex flex-col space-y-2 bg-transparent p-4 justify-center items-center'>
         {displayedTechnologies.map((tech, index) => (
           <div key={index}>{technologyIcons[tech]}</div>
         ))}

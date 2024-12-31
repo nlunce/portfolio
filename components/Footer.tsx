@@ -31,7 +31,7 @@ const leftSocialLinks = [
 
 export default function Footer() {
   return (
-    <footer className='md:flex hidden items-center justify-between border-t border-border bg-background h-12 text-sm'>
+    <footer className='md:flex hidden fixed bottom-0 left-0 w-full z-50 items-center justify-between border-t border-border bg-background h-12 text-sm'>
       {/* Left side with columns */}
       <div className='flex items-center h-full'>
         {/* "find me on:" column */}
