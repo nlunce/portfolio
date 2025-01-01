@@ -18,4 +18,8 @@ export type Technology =
   | 'Pandas'
   | 'Databricks'
   | 'Quarto'
-  | 'LaTeX';
+  | 'LaTeX'
+  | 'Numerical Methods'
+  | 'Linear Algebra'
+  | 'Nonlinear Systems'
+  | 'Error Analysis';

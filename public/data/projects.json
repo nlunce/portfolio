@@ -52,11 +52,21 @@
   },
 
   {
-    "title": "_test-card1",
-    "description": "This project delivers interactive analytics and visualizations for historical and real-time weather data across all Brigham Young University campuses.",
-    "imageSrc": "coming-soon",
-    "technologies": ["Python", "Streamlit", "Docker", "Pandas"],
-    "link": "https://huggingface.co/spaces/nathanlunceford/weather_analytics_byu"
+    "title": "_the-fourth-sphere",
+    "description": "An exploration of the mathematics behind GPS technology, focusing on solving nonlinear equations to determine positions and clock corrections from satellite signals.",
+    "imageSrc": "gps",
+    "technologies": [
+      "Quarto",
+      "Python",
+      "NumPy",
+      "SciPy",
+      "Matplotlib",
+      "Numerical Methods",
+      "Linear Algebra",
+      "Nonlinear Systems",
+      "Error Analysis"
+    ],
+    "link": "https://nlunce.github.io/the-fourth-sphere/"
   },
 
   {
