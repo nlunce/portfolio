@@ -52,7 +52,7 @@
   },
 
   {
-    "title": "_the-fourth-sphere",
+    "title": "_the-4th-sphere",
     "description": "An exploration of the mathematics behind GPS technology, focusing on solving nonlinear equations to determine positions and clock corrections from satellite signals.",
     "imageSrc": "gps",
     "technologies": [
