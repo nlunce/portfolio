@@ -58,14 +58,14 @@
     "technologies": [
       "Quarto",
       "Python",
-      "NumPy",
+      "Numerical Methods",
       "LaTeX",
+      "NumPy",
       "Markdown",
       "HTML",
       "CSS",
       "SciPy",
       "Matplotlib",
-      "Numerical Methods",
       "Linear Algebra",
       "Nonlinear Systems",
       "Error Analysis"
