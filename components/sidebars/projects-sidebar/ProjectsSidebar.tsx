@@ -7,27 +7,26 @@ import { useProjectsSidebar } from './ProjectsSidebarContext';
 
 // Icons
 import {
-  FaPython,
   FaAws,
   FaDocker,
   FaReact,
   FaHtml5,
   FaCss3,
-  FaJava,
   FaMarkdown,
+  FaPython,
 } from 'react-icons/fa';
-
+import { PiSigmaThin } from 'react-icons/pi';
 import { RiNextjsFill, RiTailwindCssFill } from 'react-icons/ri';
 import { FaGolang } from 'react-icons/fa6';
 import {
-  SiAuth0,
   SiTerraform,
-  SiQuarto,
-  SiPandas,
-  SiPolars,
   SiDatabricks,
   SiTypescript,
   SiJavascript,
+  SiAuth0,
+  SiPolars,
+  SiPandas,
+  SiQuarto,
   SiLatex,
 } from 'react-icons/si';
 import { IoCaretDownSharp } from 'react-icons/io5';
@@ -70,8 +69,8 @@ const techItems: TechItem[] = [
   { name: 'Quarto', Icon: SiQuarto },
   { name: 'Markdown', Icon: FaMarkdown },
   { name: 'LaTeX', Icon: SiLatex },
+  { name: 'Numerical Methods', Icon: PiSigmaThin },
 ];
-
 export default function ProjectsSidebar() {
   const { checkedItems, toggleItem } = useProjectsSidebar();
 
