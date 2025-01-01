@@ -9,12 +9,12 @@ import {
   FaCss3,
   FaMarkdown,
 } from 'react-icons/fa';
-import { RiNextjsFill, RiTailwindCssFill, RiNextjsLine } from 'react-icons/ri';
+import { PiSigmaThin } from 'react-icons/pi';
+import { RiNextjsFill, RiTailwindCssFill } from 'react-icons/ri';
 import { FaGolang } from 'react-icons/fa6';
 import {
   SiTerraform,
   SiDatabricks,
-  SiPython,
   SiTypescript,
   SiJavascript,
   SiDotnet,
@@ -24,6 +24,9 @@ import {
   SiQuarto,
   SiLatex,
 } from 'react-icons/si';
+import { LuMove3D } from 'react-icons/lu';
+import { TbArrowCurveLeft } from 'react-icons/tb';
+import { MdDifference } from 'react-icons/md';
 import { Technology } from '@/types/technology';
 
 export const technologyIcons: Record<Technology, JSX.Element> = {
@@ -61,4 +64,16 @@ export const technologyIcons: Record<Technology, JSX.Element> = {
   ),
   Quarto: <SiQuarto style={{ color: '#447099', fontSize: '1.50rem' }} />,
   LaTeX: <SiLatex style={{ color: '#61DAFB', fontSize: '1.50rem' }} />,
+  'Numerical Methods': (
+    <PiSigmaThin style={{ color: '#61DAFB', fontSize: '1.50rem' }} />
+  ),
+  'Linear Algebra': (
+    <LuMove3D style={{ color: '#61DAFB', fontSize: '1.50rem' }} />
+  ),
+  'Nonlinear Systems': (
+    <TbArrowCurveLeft style={{ color: '#61DAFB', fontSize: '1.50rem' }} />
+  ),
+  'Error Analysis': (
+    <MdDifference style={{ color: '#61DAFB', fontSize: '1.50rem' }} />
+  ),
 };
