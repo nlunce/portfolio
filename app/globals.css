@@ -20,9 +20,6 @@ body {
   padding: 0;
   width: 100%;
   height: 100%;
-  /* Prevent outer page scroll */
-  overflow: hidden;
-  font-family: 'Fira Code', 'Courier New', monospace;
 }
 
 body {
@@ -30,19 +27,7 @@ body {
   flex-direction: column;
   background: var(--background);
   color: var(--foreground);
-}
-
-/* Footer (already pinned or static as needed) */
-footer {
-  flex-shrink: 0; /* ensures footer is not squashed */
-  background: var(--background-dark);
-  color: var(--foreground);
-  border-top: 1px solid var(--border);
-  height: 3rem; /* h-12 in Tailwind */
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 1rem;
+  overflow: hidden; /* Keep this on body only */
 }
 
 /* Custom scrollbar classes */

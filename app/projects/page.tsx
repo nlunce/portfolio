@@ -17,9 +17,10 @@ export default function ProjectsPage() {
     </ProjectsSidebarProvider>
   );
 }
+
 const Content = () => {
   return (
-    <div className='flex-1 text-sm text-foreground'>
+    <div className='flex-1 text-sm text-foreground flex flex-col'>
       <div className='flex items-center'>
         <div className='flex border-b border-r border-border w-40 lg:w-48 items-center bg-background'>
           <span className='py-2 pl-3 whitespace-nowrap flex-1'>
@@ -30,7 +31,9 @@ const Content = () => {
         <div className='flex border-b border-border w-full h-[2.30625rem] items-center bg-background'></div>
       </div>
 
-      <Projects />
+      <div className='flex-1'>
+        <Projects />
+      </div>
     </div>
   );
 };

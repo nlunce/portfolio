@@ -23,18 +23,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en' className={firaCode.className}>
-      <body className='bg-dark text-foreground flex flex-col min-h-screen'>
+      <body className='bg-dark text-foreground flex flex-col h-screen'>
         {/* Navbar */}
         <div className='z-10 w-full'>
           <Navbar />
         </div>
 
-        <div className='relative flex-grow flex'>
+        <div className='relative flex flex-1'>
           <div className='absolute inset-0 -z-10'>
             <InteractiveCanvas />
           </div>
 
-          <main className='flex-grow'>{children}</main>
+          <main className='w-full'>{children}</main>
         </div>
 
         <Footer />

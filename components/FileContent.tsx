@@ -23,7 +23,7 @@ const FileContent = ({ fileName }: { fileName: string }) => {
     contentComponents[baseName] || (() => <p>Content not found.</p>);
 
   return (
-    <div className='p-4'>
+    <div className='p-4 h-[calc(100vh-8.3rem)] custom-scrollbar'>
       <ContentComponent />
     </div>
   );
