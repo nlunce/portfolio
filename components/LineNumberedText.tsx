@@ -120,7 +120,7 @@ const LineNumberedText: React.FC<LineNumberedTextProps> = ({
   const cumulativeLineCounts = useMemo<number[]>(() => {
     const cumCounts: number[] = [];
     let total = 0;
-    for (let count of lineCounts) {
+    for (const count of lineCounts) {
       cumCounts.push(total);
       total += count;
     }
