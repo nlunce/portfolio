@@ -1,3 +1,5 @@
+// File.tsx
+
 import React from 'react';
 import { FileProps } from './types';
 import {
@@ -9,7 +11,12 @@ import {
 } from 'react-icons/si';
 import { FaFilePdf, FaReact, FaFileAlt } from 'react-icons/fa';
 
-const File: React.FC<FileProps> = ({ name, fileType, onClick }) => {
+const File: React.FC<FileProps> = ({
+  name,
+  fileType,
+  onClick,
+  selected = false,
+}) => {
   const getIcon = () => {
     switch (fileType) {
       case 'md':
@@ -35,8 +42,18 @@ const File: React.FC<FileProps> = ({ name, fileType, onClick }) => {
 
   return (
     <div
-      className='flex items-center cursor-pointer hover:bg-border transition pl-14 py-1 group'
-      onClick={onClick} // Use the onClick handler
+      className={`flex items-center cursor-pointer transition pl-14 py-1 group ${
+        selected ? 'bg-border ' : 'hover:bg-border'
+      }`}
+      onClick={onClick}
+      role='button'
+      aria-selected={selected}
+      tabIndex={0} // Makes the div focusable
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          onClick();
+        }
+      }}
     >
       {getIcon()}
       <span className='text-foreground text-sm group-hover:text-accent'>

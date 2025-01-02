@@ -119,7 +119,7 @@ const LineNumberedText: React.FC<LineNumberedTextProps> = ({
         {paragraphsWithSpacing.map((para, index) => (
           <div
             key={`para-${index}`}
-            className='line-numbered-text-paragraph text-off-white leading-6'
+            className='line-numbered-text-paragraph leading-6'
           >
             {para.trim() || '\u00A0'}
           </div>

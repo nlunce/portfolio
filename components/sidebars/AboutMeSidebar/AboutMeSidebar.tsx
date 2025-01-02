@@ -1,3 +1,5 @@
+// AboutMeSidebar.tsx
+
 'use client';
 import React from 'react';
 import { IoCaretDownSharp } from 'react-icons/io5';
@@ -10,7 +12,7 @@ import { FileProps } from '../File/types';
 type FolderData = {
   name: string;
   iconColor: string;
-  files: FileProps[];
+  files: Omit<FileProps, 'onClick'>[]; // Exclude 'onClick' from FileProps
 };
 
 // Explicitly type the folderData array
@@ -18,27 +20,27 @@ const folderData: FolderData[] = [
   {
     name: 'bio',
     iconColor: 'text-red-500',
-    files: [{ name: 'bio', fileType: 'md', onClick: undefined }],
+    files: [{ name: 'bio', fileType: 'md' }],
   },
   {
     name: 'education',
     iconColor: 'text-green-500',
-    files: [{ name: 'education', fileType: 'md', onClick: undefined }],
+    files: [{ name: 'education', fileType: 'md' }],
   },
   {
     name: 'interests',
     iconColor: 'text-yellow-500',
-    files: [{ name: 'interests', fileType: 'md', onClick: undefined }],
+    files: [{ name: 'interests', fileType: 'md' }],
   },
   {
     name: 'resume',
     iconColor: 'text-blue-500',
-    files: [{ name: 'resume', fileType: 'pdf', onClick: undefined }],
+    files: [{ name: 'resume', fileType: 'pdf' }],
   },
 ];
 
 export default function AboutMeSidebar() {
-  const { selectFile } = useAboutMeSidebar();
+  const { selectFile, selectedFile } = useAboutMeSidebar(); // Destructure from context
 
   return (
     <aside
@@ -67,14 +69,21 @@ export default function AboutMeSidebar() {
               name={folder.name}
               iconColor={folder.iconColor}
             >
-              {folder.files.map((file) => (
-                <File
-                  key={file.name}
-                  name={file.name}
-                  fileType={file.fileType}
-                  onClick={() => selectFile(file.name)} // Pass the onClick handler
-                />
-              ))}
+              {folder.files.length > 0 ? (
+                folder.files.map((file) => (
+                  <File
+                    key={file.name}
+                    name={`${file.name}.${file.fileType}`} // e.g., 'bio.md'
+                    fileType={file.fileType}
+                    selected={`${file.name}.${file.fileType}` === selectedFile} // Compare full name
+                    onClick={() => selectFile(`${file.name}.${file.fileType}`)} // Pass full name
+                  />
+                ))
+              ) : (
+                <div className='pl-20 text-gray-500 text-sm'>
+                  No files available.
+                </div>
+              )}
             </Folder>
           ))}
         </div>

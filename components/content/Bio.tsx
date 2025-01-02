@@ -21,7 +21,7 @@ Outside of work, I’m proud to be an Eagle Scout and recipient of the BYU-I Ful
   `;
 
   return (
-    <div className='xl:w-2/3'>
+    <div className='xl:w-2/3 text-off-white'>
       <LineNumberedText
         text={bioText}
         lineNumberClassName='pr-7 text-right text-foreground'

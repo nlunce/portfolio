@@ -1,10 +1,12 @@
+// FileContent.tsx
+
 import React from 'react';
 import Bio from '@/components/content/Bio';
 import Education from '@/components/content/Education';
 import Interests from '@/components/content/Interests';
 import Resume from '@/components/content/Resume';
 
-// Map of file names to corresponding components
+// Map of base file names to corresponding components
 const contentComponents: Record<string, React.FC> = {
   bio: Bio,
   education: Education,
@@ -13,9 +15,12 @@ const contentComponents: Record<string, React.FC> = {
 };
 
 const FileContent = ({ fileName }: { fileName: string }) => {
-  // Get the component corresponding to the fileName
+  // Extract the base name from the full file name
+  const baseName = fileName.split('.')[0];
+
+  // Get the component corresponding to the baseName
   const ContentComponent =
-    contentComponents[fileName] || (() => <p>Content not found.</p>);
+    contentComponents[baseName] || (() => <p>Content not found.</p>);
 
   return (
     <div className='p-4'>

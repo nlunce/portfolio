@@ -1,32 +1,38 @@
+// AboutMeSidebarContext.tsx
+
+'use client';
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
+// Define the shape of the context
 interface AboutMeSidebarContextType {
-  currentFile: string;
-  selectFile: (file: string) => void;
+  selectedFile: string | null;
+  selectFile: (fileName: string | null) => void;
 }
 
+// Create the context with default undefined
 const AboutMeSidebarContext = createContext<
   AboutMeSidebarContextType | undefined
 >(undefined);
 
-export const AboutMeSidebarProvider = ({
+// Create a provider component
+export const AboutMeSidebarProvider: React.FC<{ children: ReactNode }> = ({
   children,
-}: {
-  children: ReactNode;
 }) => {
-  const [currentFile, setCurrentFile] = useState<string>('bio'); // Default file
+  const [selectedFile, setSelectedFile] = useState<string | null>(null);
 
-  const selectFile = (file: string) => {
-    setCurrentFile(file);
+  // Function to select or deselect a file
+  const selectFile = (fileName: string | null) => {
+    setSelectedFile((prev) => (prev === fileName ? null : fileName)); // Toggle selection
   };
 
   return (
-    <AboutMeSidebarContext.Provider value={{ currentFile, selectFile }}>
+    <AboutMeSidebarContext.Provider value={{ selectedFile, selectFile }}>
       {children}
     </AboutMeSidebarContext.Provider>
   );
 };
 
+// Custom hook to use the context
 export const useAboutMeSidebar = () => {
   const context = useContext(AboutMeSidebarContext);
   if (!context) {

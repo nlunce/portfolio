@@ -1,5 +1,7 @@
-export type FileProps = {
+// types.ts
+export interface FileProps {
   name: string;
-  fileType: 'md' | 'js' | 'ts' | 'jsx' | 'tsx' | 'json' | 'css' | 'pdf';
-  onClick?: () => void; // Optional onClick function
-};
+  fileType: string;
+  onClick: () => void;
+  selected?: boolean; // New optional prop
+}

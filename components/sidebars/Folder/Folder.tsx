@@ -1,3 +1,5 @@
+// Folder.tsx
+
 import React, { useState } from 'react';
 import { FolderProps } from './types';
 import { FaFolder, FaFolderOpen } from 'react-icons/fa';
@@ -20,6 +22,14 @@ const Folder: React.FC<FolderProps> = ({
       <div
         className='flex items-center cursor-pointer hover:bg-border transition px-5 py-1 group'
         onClick={toggleOpen}
+        role='button'
+        aria-expanded={isOpen}
+        tabIndex={0} // Makes the div focusable
+        onKeyPress={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            toggleOpen();
+          }
+        }}
       >
         {isOpen ? (
           <MdKeyboardArrowDown className='mr-1' />
