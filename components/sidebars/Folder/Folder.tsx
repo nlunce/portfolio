@@ -5,12 +5,17 @@ import { FolderProps } from './types';
 import { FaFolder, FaFolderOpen } from 'react-icons/fa';
 import { MdKeyboardArrowDown, MdKeyboardArrowRight } from 'react-icons/md';
 
-const Folder: React.FC<FolderProps> = ({
+interface ExtendedFolderProps extends FolderProps {
+  defaultOpen?: boolean; // New prop to set default open state
+}
+
+const Folder: React.FC<ExtendedFolderProps> = ({
   name,
   children,
   iconColor = 'text-yellow-500',
+  defaultOpen = false, // Default to closed if not specified
 }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(defaultOpen);
 
   const toggleOpen = () => {
     setIsOpen((prev) => !prev);

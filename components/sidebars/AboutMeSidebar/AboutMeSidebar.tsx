@@ -13,6 +13,7 @@ type FolderData = {
   name: string;
   iconColor: string;
   files: Omit<FileProps, 'onClick'>[]; // Exclude 'onClick' from FileProps
+  defaultOpen?: boolean; // New property to set default open state
 };
 
 // Explicitly type the folderData array
@@ -21,6 +22,7 @@ const folderData: FolderData[] = [
     name: 'bio',
     iconColor: 'text-red-500',
     files: [{ name: 'bio', fileType: 'md' }],
+    defaultOpen: true, // Open the Bio folder by default
   },
   {
     name: 'education',
@@ -68,6 +70,7 @@ export default function AboutMeSidebar() {
               key={folder.name}
               name={folder.name}
               iconColor={folder.iconColor}
+              defaultOpen={folder.defaultOpen} // Pass defaultOpen prop
             >
               {folder.files.length > 0 ? (
                 folder.files.map((file) => (

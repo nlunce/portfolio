@@ -18,7 +18,8 @@ const AboutMeSidebarContext = createContext<
 export const AboutMeSidebarProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
-  const [selectedFile, setSelectedFile] = useState<string | null>(null);
+  // Initialize selectedFile to 'bio.md' for default selection
+  const [selectedFile, setSelectedFile] = useState<string | null>('bio.md');
 
   // Function to select or deselect a file
   const selectFile = (fileName: string | null) => {

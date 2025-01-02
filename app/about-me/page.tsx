@@ -21,9 +21,7 @@ export default function AboutMePage() {
 }
 
 const Content = () => {
-  const { selectedFile, selectFile } = useAboutMeSidebar(); // Correct destructuring
-
-  console.log('Selected File:', selectedFile); // Debugging statement
+  const { selectedFile, selectFile } = useAboutMeSidebar();
 
   if (!selectedFile) {
     return (
@@ -42,7 +40,7 @@ const Content = () => {
           </span>
           <IoMdClose
             className='ml-auto mr-2 cursor-pointer'
-            onClick={() => selectFile(null)} // Deselect the file
+            onClick={() => selectFile(null)}
             aria-label='Close file view'
             role='button'
             tabIndex={0}
