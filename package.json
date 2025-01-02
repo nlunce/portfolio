@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "lodash": "^4.17.21",
+    "lodash.debounce": "^4.0.8",
     "next": "15.1.2",
     "next-cloudinary": "^6.16.0",
     "playwright": "^1.49.1",
@@ -18,12 +20,14 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@types/lodash.debounce": "^4.0.9",
     "@types/node": "^20",
     "@types/react": "^19.0.2",
     "@types/react-dom": "^19.0.2",
     "eslint": "^9",
     "eslint-config-next": "15.1.2",
     "postcss": "^8",
+    "raw-loader": "^4.0.2",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }

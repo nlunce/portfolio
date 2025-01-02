@@ -3,7 +3,7 @@
 
 import React, { useEffect, useState } from 'react';
 import ProjectCard from './ProjectCard';
-import { useProjectsSidebar } from '@/components/sidebars/projects-sidebar/ProjectsSidebarContext';
+import { useProjectsSidebar } from '@/components/sidebars/ProjectsSidebar/ProjectsSidebarContext';
 import { Project } from '@/types/project';
 import { Technology } from '@/types/technology';
 

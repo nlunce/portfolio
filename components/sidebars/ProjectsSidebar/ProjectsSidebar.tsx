@@ -87,8 +87,10 @@ export default function ProjectsSidebar() {
       <nav>
         {/* Heading row */}
         <div className='flex items-center py-2 border-b border-border px-6'>
-          <IoCaretDownSharp className='text-off-white h-3 w-3 mr-1' />
-          <span className='text-off-white text-sm pl-1'>projects</span>
+          <IoCaretDownSharp className='text-off-white h-3 w-3 mr-1 cursor-pointer' />
+          <span className='text-off-white text-sm pl-1 cursor-pointer'>
+            projects
+          </span>
         </div>
 
         {/* Mapped tech items */}
