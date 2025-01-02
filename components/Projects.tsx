@@ -31,7 +31,7 @@ export default function Projects() {
       : projects;
 
   return (
-    <div className='h-[calc(100vh-8.3rem)] custom-scrollbar'>
+    <div className='h-[calc(100vh-8.3rem)] custom-scrollbar pb-12'>
       {checkedItems.length > 0 ? (
         <div className='text-accent-tertiary h-20 pl-6 pt-4 mb-1'>
           import{' '}
