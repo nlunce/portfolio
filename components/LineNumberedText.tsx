@@ -15,7 +15,7 @@ interface LineNumberedTextProps {
 const LineNumberedText: React.FC<LineNumberedTextProps> = ({
   text,
   lineNumberClassName = 'pr-4 text-right text-foreground',
-  contentClassName = 'flex-1 max-w-2/3 leading-6',
+  contentClassName = 'flex-1 max-w-2/3',
   containerClassName = 'flex',
   lineHeightMultiplier = 1.2,
   debounceDelay = 100,
@@ -42,18 +42,26 @@ const LineNumberedText: React.FC<LineNumberedTextProps> = ({
   const [lineCounts, setLineCounts] = useState<number[]>([]);
 
   useLayoutEffect(() => {
+    if (!containerRef.current) return;
+
+    const paragraphEls = containerRef.current.querySelectorAll(
+      '.line-numbered-text-paragraph'
+    );
+
+    if (!paragraphEls.length) return;
+
+    // Function to calculate line numbers
     const calculateLineNumbers = () => {
       if (!containerRef.current) return;
 
-      // Select all elements corresponding to paragraphs and blank lines
-      const paragraphEls = containerRef.current.querySelectorAll(
+      const paragraphElements = containerRef.current.querySelectorAll(
         '.line-numbered-text-paragraph'
       );
 
-      if (!paragraphEls.length) return;
+      if (!paragraphElements.length) return;
 
       // Get the computed style of the first paragraph to determine line-height
-      const style = getComputedStyle(paragraphEls[0]);
+      const style = getComputedStyle(paragraphElements[0]);
       let lineHeight = parseFloat(style.lineHeight);
 
       // Fallback if lineHeight is 'normal' or cannot be parsed
@@ -64,9 +72,12 @@ const LineNumberedText: React.FC<LineNumberedTextProps> = ({
 
       const tempCounts: number[] = [];
 
-      paragraphEls.forEach((el) => {
+      paragraphElements.forEach((el) => {
         const height = el.getBoundingClientRect().height;
-        tempCounts.push(Math.ceil(height / lineHeight));
+        // Add a small epsilon to account for sub-pixel rendering differences
+        // Use Math.round and ensure at least 1 line per paragraph
+        const lines = Math.max(1, Math.round((height + 0.01) / lineHeight));
+        tempCounts.push(lines);
       });
 
       // Only update state if the array has actually changed
@@ -81,37 +92,57 @@ const LineNumberedText: React.FC<LineNumberedTextProps> = ({
       });
     };
 
-    // Create a debounced version of calculateLineNumbers using Lodash
-    const debouncedCalculate = debounce(calculateLineNumbers, debounceDelay);
+    // Debounced version of calculateLineNumbers
+    const debouncedCalculate = debounce(() => {
+      // Use requestAnimationFrame to ensure measurements occur after layout
+      requestAnimationFrame(calculateLineNumbers);
+    }, debounceDelay);
 
-    // Add event listener for window resize
-    window.addEventListener('resize', debouncedCalculate);
+    // Initialize ResizeObserver
+    const resizeObserver = new ResizeObserver(() => {
+      debouncedCalculate();
+    });
 
-    // Initial calculation
-    calculateLineNumbers();
+    // Observe the container for size changes
+    resizeObserver.observe(containerRef.current);
+
+    // Initial calculation after ensuring layout is complete
+    requestAnimationFrame(calculateLineNumbers);
 
     // Cleanup on unmount
     return () => {
-      window.removeEventListener('resize', debouncedCalculate);
+      resizeObserver.disconnect();
       debouncedCalculate.cancel(); // Cancel any pending debounced calls
     };
   }, [paragraphsWithSpacing, debounceDelay, lineHeightMultiplier]);
 
+  // Calculate the total number of lines up to each paragraph
+  const cumulativeLineCounts = useMemo<number[]>(() => {
+    const cumCounts: number[] = [];
+    let total = 0;
+    for (let count of lineCounts) {
+      cumCounts.push(total);
+      total += count;
+    }
+    return cumCounts;
+  }, [lineCounts]);
+
   return (
     <div className={containerClassName}>
       {/* Line numbers */}
-      <div className={lineNumberClassName} aria-hidden='true'>
-        {lineCounts.map((count, pIndex) => {
-          // Calculate the offset for continuous numbering
-          const offset = lineCounts
-            .slice(0, pIndex)
-            .reduce((acc, curr) => acc + curr, 0);
-          return Array.from({ length: count }, (_, i) => (
-            <div key={`line-${pIndex}-${i}`} className='leading-6'>
-              {offset + i + 1}
-            </div>
-          ));
-        })}
+      <div
+        className={`${lineNumberClassName} whitespace-nowrap`}
+        aria-hidden='true'
+      >
+        {lineCounts.length > 0 &&
+          lineCounts.map((count, pIndex) => {
+            const offset = cumulativeLineCounts[pIndex];
+            return Array.from({ length: count }, (_, i) => (
+              <div key={`line-${pIndex}-${i}`} className='leading-6'>
+                {offset + i + 1}
+              </div>
+            ));
+          })}
       </div>
 
       {/* Content */}
