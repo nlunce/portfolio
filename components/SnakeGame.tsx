@@ -345,7 +345,6 @@ export default function SnakeGame({
   };
 
   // Calculate dimensions
-  const gridPixelWidth = config.gridWidth * config.cellSize;
   const gridPixelHeight = config.gridHeight * config.cellSize;
   const cellPixelSize = config.cellSize + config.segmentOverlap;
   const cellMargin = -config.segmentOverlap / 2;
@@ -434,9 +433,9 @@ export default function SnakeGame({
             {!showLeaderboard ? (
               <>
                 <div className='text-foreground text-xs'>
-                  // use keyboard
+                  {'// use keyboard'}
                   <br />
-                  // arrows to play
+                  {'// arrows to play'}
                 </div>
                 <div className='flex flex-col items-center space-y-1'>
                   <div className='w-8 h-8 bg-border rounded flex items-center justify-center'>
@@ -455,7 +454,7 @@ export default function SnakeGame({
                   </div>
                 </div>
                 <div className='text-foreground text-sm w-32'>
-                  // score: {score}
+                  {'// score: '}{score}
                 </div>
                 <button
                   onClick={startGame}
@@ -479,7 +478,7 @@ export default function SnakeGame({
               <div className='space-y-3 w-full'>
                 <div className='flex justify-between items-center'>
                   <h3 className='text-foreground font-semibold text-sm'>
-                    // leaderboard
+                    {'// leaderboard'}
                   </h3>
                   <button
                     onClick={fetchLeaderboard}
@@ -545,7 +544,7 @@ export default function SnakeGame({
                   Game Over!
                 </div>
                 <div className='text-foreground text-sm w-32'>
-                  // score: {score}
+                  {'// score: '}{score}
                 </div>
 
                 {!showNameInput && !hasSubmittedScore ? (
@@ -625,7 +624,7 @@ export default function SnakeGame({
             ) : (
               <div className='space-y-3'>
                 <div className='text-foreground text-sm w-32'>
-                  // score: {score}
+                  {'// score: '}{score}
                 </div>
                 <button
                   onClick={() => setPaused(true)}

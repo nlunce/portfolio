@@ -91,7 +91,7 @@ export async function POST(request: Request) {
     }
 
     // Sanitize name (max 16 chars, alphanumeric and spaces only)
-    let sanitizedName = name.trim().slice(0, 16).replace(/[^a-zA-Z0-9 ]/g, '');
+    const sanitizedName = name.trim().slice(0, 16).replace(/[^a-zA-Z0-9 ]/g, '');
 
     if (!sanitizedName) {
       return NextResponse.json(
