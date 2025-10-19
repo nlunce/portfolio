@@ -12,8 +12,9 @@ const firaCode = Fira_Code({
 });
 
 export const metadata = {
-  title: 'Portfolio',
-  description: 'Showcasing software and math skills',
+  title: 'Nathan Lunceford | Developer Portfolio',
+  description:
+    'Software developer and mathematician building innovative solutions through code and creative problem-solving.',
 };
 
 export default function RootLayout({
